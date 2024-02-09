@@ -39,9 +39,9 @@ function App() {
 
     <div className="images">
       <div className="row">
-        <img src="/assets/icy1.png" alt="" />
-        <img src="/assets/canada1.png" alt="" />
-        <img src="/assets/christmas1.png" alt="" />
+        <img src="assets/icy1.png" alt="" />
+        <img src="assets/canada1.png" alt="" />
+        <img src="assets/christmas1.png" alt="" />
       </div>
 
       <h1 className='intermission'>woah, what is that stuff at the bottom</h1>
@@ -50,9 +50,9 @@ function App() {
       <div className="space" />
 
       <div className="row">
-        <img src="/assets/icy2.png" alt="" />
-        <img src="/assets/canada2.png" alt="" />
-        <img src="/assets/christmas2.png" alt="" />
+        <img src="assets/icy2.png" alt="" />
+        <img src="assets/canada2.png" alt="" />
+        <img src="assets/christmas2.png" alt="" />
       </div>
       <h1 className='intermission'>wow theres more!</h1>
       <div className="space" />
@@ -61,9 +61,9 @@ function App() {
       <div className="space" />
 
       <div className="row">
-        <img src="/assets/icy3.png" alt="" />
-        <img src="/assets/canada3.png" alt="" />
-        <img src="/assets/christmas3.png" alt="" />
+        <img src="assets/icy3.png" alt="" />
+        <img src="assets/canada3.png" alt="" />
+        <img src="assets/christmas3.png" alt="" />
       </div>
       <h1 className='intermission'>woahhh look at that!</h1>
       <div className="space" />
@@ -73,9 +73,9 @@ function App() {
       <div className="space" />
 
       <div className="row">
-        <img src="/assets/icy4.png" alt="" />
-        <img src="/assets/canada4.png" alt="" />
-        <img src="/assets/christmas4.png" alt="" />
+        <img src="assets/icy4.png" alt="" />
+        <img src="assets/canada4.png" alt="" />
+        <img src="assets/christmas4.png" alt="" />
       </div>
 
       <h1 className='intermission'>wooooooooh, you did it!!!</h1>
