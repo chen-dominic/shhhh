@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&family=Press+Start+2P&family=Raleway:wght@400;700&family=Yesteryear&display=swap');
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: rgb(203, 141, 151);
+  margin: 0;
+  cursor: url('https://www.freeiconspng.com/thumbs/cursor-png/description-cursor-icon-with-shadow-32.png'), auto;
+}
+
+.images{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.row{
+  position: sticky;
+  top: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space{
+  height: 200vh;
+}
+
+img {
+  height: 280px;
+  transition: all .3s ease-in-out;
+}
+
+.row img:hover{
+  animation: updown .2s linear infinite;
+}
+
+@keyframes updown {
+  50%{
+    transform: translateY(-15px);
+  }
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.intermission{
+  color: white;
+  font-family: 'Bellota', system-ui;
+  font-size: 8rem;
+  font-weight: 800;
+  text-align: center;
+  height: 130vh;
+  width: 100%;
+  background-color: rgb(161, 108, 134);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 0;
+  margin: 0;
+}
+
+.question-con {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(232, 157, 232);
+  font-family: 'Press Start 2P', system-ui;
+  position: relative;
+}
+
+.question{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.question h1 {
+  position: relative;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 2.6rem;
+  color: white;
+}
+
+.question h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.2em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20rem;
+}
+
+.btn {
+  font-family: 'Press Start 2P', system-ui;
+  height: 150px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+
+.yes {
+  background-color: green;
+}
+
+.no {
+  background-color: red;
+  transition: all 0.3s ease;
+}
+
+.yes:hover {
+  animation: greenFlash 0.15s linear infinite, pulse 0.8s linear infinite;
+}
+
+.hidden-img {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.sad-cat{
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  transform: translate(-50%,50%);
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.no-con:hover ~ .sad-cat{
+  opacity: 0.8;
+}
+
+.sad-cat img{
+  width: 200px;
+  height: auto;
+}
+
+.no-con{
+  position: relative;
+  height: 150px;
+  width: 300px;
+}
+
+.no-con:hover .no{
+  transform: scale(0.2);
+}
+
+.no-con:hover .hidden-img {
+  opacity: 0.5;
+}
+
+@keyframes greenFlash {
+  0% {
+    background-color: rgb(10, 179, 10);
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.celebration{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 226, 226);
+  font-family: 'Press Start 2P', system-ui;
+  position: relative;
+  color: rgb(255, 111, 135);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.celebration .header{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.2em; /* Adjust as needed */
+  animation: typingBack 3s steps(40, end) infinite;
+  flex: 1;
+}
+
+@keyframes typingBack {
+  0%{
+    width: 0;
+  }
+  50%{
+    width: 50%;
+  }
+  100%{
+    width: 0%
+  }
+}
+
+.dancers{
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.celebration .dancer{
+  flex: 1;
+  opacity: 0;
+}
+
+.d1{
+  animation: fadeIn 8s linear forwards;
+}
+
+.d2{
+  animation: fadeIn 4s linear forwards;
+}
+
+@keyframes fadeIn {
+  100%{
+    opacity: 1;
+  }
+}
+
+.plans{
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+.big-q {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-flash 0.3s linear infinite;
+}
+
+@keyframes rainbow-flash {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.plan{
+  height: 300px;
+  width: 300px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  border: solid 1px black;
+  margin: 0 3rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan h2{
+  text-align: center;
+  font-weight: bold;
+}
+
+.plan p{
+  font-size: 1.3rem;
+}
+
+.accomplice{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+  border: solid 10px rgb(226, 206, 73);
+}
+
+.plan a{
+  position: absolute;
+  text-decoration: none;
+  font-size: 2.4rem;
+  text-align: center;
+  left: 80%;
+  bottom: 5%;
+  transition: all .1s ease-in-out;
+}
+
+.plan a:hover{
+  transform: scale(1.15);
+}

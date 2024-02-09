@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap');
+
+.hero{
+    display: flex;
+    font-family: 'Bellota', system-ui;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero .title{
+    flex: 1;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    align-items: center;
+}
+.hero .hero-visual{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero .hero-visual img{
+    width: 500px;
+    height: auto;
+    animation: floaty-twist 2s infinite ease-in-out;
+}
+
+@keyframes floaty-twist {
+    0% { transform: translate(0,  0px); rotate: (0deg); }
+    25% { rotate: (-5deg); }
+    50%  { transform: translate(0, -50px); rotate: (0deg); }
+    75% { rotate: (5deg); }
+    100%   { transform: translate(0, 0px);  rotate: (0deg); }  
+}
